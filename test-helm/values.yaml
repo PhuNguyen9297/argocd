@@ -5,12 +5,13 @@
 replicaCount: 1
 
 image:
-  repository: public.ecr.aws/u3w6a5g2/nginx
+  repository: 817667413626.dkr.ecr.ap-southeast-1.amazonaws.com/nginx
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "dev-abcd123"
+  tag: "dev-abcd1"
 
-imagePullSecrets: []
+imagePullSecrets: 
+  - name: regcred
 nameOverride: ""
 fullnameOverride: ""
 

@@ -64,6 +64,16 @@ metadata:
     app.kubernetes.io/name: argocd-image-updater-config
     app.kubernetes.io/part-of: argocd-image-updater
   name: argocd-image-updater-config
+data:
+  registries.conf: |
+    registries:
+      - name: Elastic Container Registry
+        api_url: https://817667413626.dkr.ecr.ap-southeast-1.amazonaws.com
+        prefix: 817667413626.dkr.ecr.ap-southeast-1.amazonaws.com
+        ping: no
+        insecure: true
+        credentials: pullsecret:argocd/regcred
+        credsexpire: 1h
 ---
 apiVersion: v1
 kind: ConfigMap

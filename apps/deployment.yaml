@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx
-  namespace: bbb-dev
+  namespace: default
 spec:
   selector:
     matchLabels:
